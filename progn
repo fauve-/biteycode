@@ -1,0 +1,19 @@
+;; name our registers
+:a 0
+:b 1
+PUSH 6
+PUSH  4
+CALL :max
+HALT
+:max
+STORE :b
+STORE :a
+LOAD :a
+LOAD :b
+ISGE
+JIF :Greater
+LOAD :b
+RET
+:Greater
+LOAD :a
+RET
